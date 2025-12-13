@@ -4,4 +4,4 @@
 npm install
 npm run dev
 
-Add your OpenAI key to `.env.local`
+Add your groq key to `.env.local`
