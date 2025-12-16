@@ -47,11 +47,13 @@ export default function BriefForm() {
           className="p-3 bg-zinc-900 rounded"
           onChange={(e) => setForm({ ...form, niche: e.target.value })}
         >
-          <option>Web Design</option>
-          <option>Brand Identity</option>
-          <option>Mobile App</option>
-          <option>E-commerce</option>
-          <option>SaaS Product</option>
+          <option>Website Deveoper</option>
+          <option>Graphic Designer</option>
+          <option>Mobile App Deveoper</option>
+          <option>Ui/Ux</option>
+          <option>Copy Writing</option>
+          <option>Fashion Illustrator</option>
+          <option>2D Animator</option>
         </select>
 
         <select
@@ -79,11 +81,7 @@ export default function BriefForm() {
         {loading ? "Generating…" : "Generate Client Brief"}
       </button>
 
-      {error && (
-        <p className="text-red-400 text-sm">
-          {error}
-        </p>
-      )}
+      {error && <p className="text-red-400 text-sm">{error}</p>}
 
       {brief && <BriefOutput brief={brief} />}
     </section>
