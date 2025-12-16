@@ -61,7 +61,7 @@ export default function BriefForm() {
           onChange={(e) => setForm({ ...form, scope: e.target.value })}
         >
           <option>Quick Brief</option>
-          <option>Full Branding</option>
+          <option>Full Brief</option>
         </select>
 
         <select
@@ -76,9 +76,17 @@ export default function BriefForm() {
 
       <button
         onClick={generateBrief}
-        className="px-6 py-3 bg-white text-black rounded font-semibold"
+        disabled={loading}
+        className="px-6 py-3 bg-white text-black rounded font-semibold flex items-center justify-center gap-2 disabled:opacity-60"
       >
-        {loading ? "Generating…" : "Generate Client Brief"}
+        {loading ? (
+          <>
+            <span className="h-4 w-4 animate-spin rounded-full border-2 border-black border-t-transparent" />
+            Generating…
+          </>
+        ) : (
+          "Generate Client Brief"
+        )}
       </button>
 
       {error && <p className="text-red-400 text-sm">{error}</p>}
