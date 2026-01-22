@@ -1,8 +1,21 @@
 export default function BriefOutput({ brief }) {
-
-
   return (
-    <div className="bg-zinc-900 p-6 rounded whitespace-pre-wrap leading-relaxed">
+    <div
+      className="
+    max-w-4xl 
+    mx-auto
+    rounded-2xl 
+    p-6 md:p-8 
+    whitespace-pre-wrap 
+    leading-relaxed 
+    text-white
+
+    bg-black/50 
+    backdrop-blur-xl 
+    border border-white/10 
+    shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+  "
+    >
       {brief}
     </div>
   );

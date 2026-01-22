@@ -41,43 +41,142 @@ export default function BriefForm() {
   }
 
   return (
-    <section className="space-y-6">
+    <section
+      className="space-y-6 
+    rounded-2xl 
+    border border-white/10 
+    bg-white/5 
+    backdrop-blur-xl 
+    shadow-[0_8px_32px_rgba(0,0,0,0.35)] 
+    p-6 md:p-8"
+    >
       <div className="grid gap-4 md:grid-cols-3">
-        <select
-          className="p-3 bg-zinc-900 rounded"
-          onChange={(e) => setForm({ ...form, niche: e.target.value })}
-        >
-          <option>Website Deveoper</option>
-          <option>Graphic Designer</option>
-          <option>Mobile App Deveoper</option>
-          <option>Ui/Ux</option>
-          <option>Copy Writing</option>
-          <option>Fashion Illustrator</option>
-          <option>2D Animator</option>
-        </select>
+        <div className="relative">
+          <select
+            className="w-full p-3 rounded-xl 
+          bg-white/10 
+          text-white 
+          backdrop-blur-md 
+          border border-white/10 
+          focus:outline-none 
+          focus:ring-2 focus:ring-white/30
+          appearance-none"
+            onChange={(e) => setForm({ ...form, niche: e.target.value })}
+            value={form.niche}
+          >
+            <option disabled>Select Niche</option>
+            <option className="text-black bg-white/20">Website Developer</option>
+            <option className="text-black bg-white/20">Graphic Designer</option>
+            <option className="text-black bg-white/20">Mobile App Developer</option>
+            <option className="text-black bg-white/20">UI/UX</option>
+            <option className="text-black bg-white/20">Copy Writing</option>
+            <option className="text-black bg-white/20">Fashion Illustrator</option>
+            <option className="text-black bg-white/20">2D Animator</option>
+          </select>
 
-        <select
-          className="p-3 bg-zinc-900 rounded"
-          onChange={(e) => setForm({ ...form, scope: e.target.value })}
-        >
-          <option>Quick Brief</option>
-          <option>Full Brief</option>
-        </select>
+          <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+            <svg
+              className="w-4 h-4 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+        </div>
 
-        <select
-          className="p-3 bg-zinc-900 rounded"
-          onChange={(e) => setForm({ ...form, level: e.target.value })}
-        >
-          <option>Junior</option>
-          <option>Mid</option>
-          <option>Senior</option>
-        </select>
+        <div className="relative">
+          <select
+            className="w-full p-3 rounded-xl 
+          bg-white/10 
+          text-white 
+          backdrop-blur-md 
+          border border-white/10 
+          focus:outline-none 
+          focus:ring-2 focus:ring-white/30
+          appearance-none"
+            onChange={(e) => setForm({ ...form, scope: e.target.value })}
+            value={form.scope}
+          >
+            <option disabled>Select Scope</option>
+            <option className="text-black bg-white/20">Quick Brief</option>
+            <option className="text-black bg-white/20">Full Brief</option>
+          </select>
+
+          <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+            <svg
+              className="w-4 h-4 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+        </div>
+
+        {/* Level */}
+        <div className="relative">
+          <select
+            className="w-full p-3 rounded-xl 
+          bg-white/10 
+          text-white 
+          backdrop-blur-md 
+          border border-white/10 
+          focus:outline-none 
+          focus:ring-2 focus:ring-white/30
+          appearance-none"
+            onChange={(e) => setForm({ ...form, level: e.target.value })}
+            value={form.level}
+          >
+            <option disabled>Select Level</option>
+            <option className="text-black bg-white/20">Junior</option>
+            <option className="text-black bg-white/20">Mid</option>
+            <option className="text-black bg-white/20">Senior</option>
+          </select>
+
+          <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+            <svg
+              className="w-4 h-4 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
 
       <button
         onClick={generateBrief}
         disabled={loading}
-        className="px-6 py-3 bg-white text-black rounded font-semibold flex items-center justify-center gap-2 disabled:opacity-60"
+        className="px-6 py-3 
+      rounded-xl 
+      bg-white/90 
+      text-black 
+      font-semibold 
+      backdrop-blur-md 
+      hover:bg-white 
+      transition 
+      flex items-center justify-center gap-2 
+      disabled:opacity-60"
       >
         {loading ? (
           <>
@@ -90,7 +189,6 @@ export default function BriefForm() {
       </button>
 
       {error && <p className="text-red-400 text-sm">{error}</p>}
-
       {brief && <BriefOutput brief={brief} />}
     </section>
   );

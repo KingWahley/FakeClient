@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-950 text-zinc-100;
+  @apply 
+  bg-zinc-950 text-zinc-100 min-h-screen antialiased;
+  background-image: url("https://dlcdnwebimgs.asus.com/files/media/75236694-d98a-4221-9c5f-0ae6eb52bda5/v1/img/cool-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
