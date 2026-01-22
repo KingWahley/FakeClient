@@ -52,7 +52,6 @@ export default function BriefForm() {
     h-auto
 
     "
-    
     >
       <div className="grid gap-4 md:grid-cols-3">
         <div className="relative">
@@ -69,12 +68,18 @@ export default function BriefForm() {
             value={form.niche}
           >
             <option disabled>Select Niche</option>
-            <option className="text-black bg-white/20">Website Developer</option>
+            <option className="text-black bg-white/20">
+              Website Developer
+            </option>
             <option className="text-black bg-white/20">Graphic Designer</option>
-            <option className="text-black bg-white/20">Mobile App Developer</option>
+            <option className="text-black bg-white/20">
+              Mobile App Developer
+            </option>
             <option className="text-black bg-white/20">UI/UX</option>
             <option className="text-black bg-white/20">Copy Writing</option>
-            <option className="text-black bg-white/20">Fashion Illustrator</option>
+            <option className="text-black bg-white/20">
+              Fashion Illustrator
+            </option>
             <option className="text-black bg-white/20">2D Animator</option>
           </select>
 
@@ -134,13 +139,12 @@ export default function BriefForm() {
         <div className="relative">
           <select
             className="w-full p-3 rounded-xl 
-          bg-white/10 
-          text-white 
-          backdrop-blur-md 
-          border border-white/10 
-          focus:outline-none 
-          focus:ring-2 focus:ring-white/30
-          appearance-none"
+          w-full p-3 rounded-xl
+    bg-white/20  
+    text-white
+    border border-white/20
+    focus:outline-none focus:ring-2 focus:ring-white/30
+    appearance-none"
             onChange={(e) => setForm({ ...form, level: e.target.value })}
             value={form.level}
           >
