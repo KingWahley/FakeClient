@@ -6,9 +6,9 @@ export default function Home() {
     <main
       className="
     w-Full
-    h-[100vh]
+    h-auto
     mx-auto 
-    p-6 md:p-10 
+    p-2 md:p-10 
     space-y-10
 
  

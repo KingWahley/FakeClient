@@ -9,11 +9,12 @@ export default function BriefOutput({ brief }) {
     whitespace-pre-wrap 
     leading-relaxed 
     text-white
+    h-auto
 
     bg-black/50 
     backdrop-blur-xl 
     border border-white/10 
-    shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+    
   "
     >
       {brief}

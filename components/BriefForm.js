@@ -44,11 +44,15 @@ export default function BriefForm() {
     <section
       className="space-y-6 
     rounded-2xl 
-    border border-white/10 
     bg-white/5 
     backdrop-blur-xl 
     shadow-[0_8px_32px_rgba(0,0,0,0.35)] 
-    p-6 md:p-8"
+    p-2 md:p-8
+    w-full
+    h-auto
+
+    "
+    
     >
       <div className="grid gap-4 md:grid-cols-3">
         <div className="relative">
