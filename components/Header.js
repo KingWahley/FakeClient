@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header
-      className="space-y-2 
+      className="space-y-1
     rounded-xl 
     bg-white/5 
     backdrop-blur-md 
@@ -11,7 +11,7 @@ export default function Header() {
     
   "
     >
-      <h1 className="text-4xl font-bold text-white">Fake Client</h1>
+      <h1 className="text-2xl font-bold text-white">Fake Client</h1>
       <p className="text-zinc-400">Practice with real-world Client briefs</p>
     </header>
   );
