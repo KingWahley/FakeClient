@@ -1,7 +1,7 @@
 export default function BriefOutput({ brief }) {
   return (
-    <div
-      className="
+   <div
+  className="
     max-w-4xl 
     mx-auto
     rounded-2xl 
@@ -9,16 +9,18 @@ export default function BriefOutput({ brief }) {
     whitespace-pre-wrap 
     leading-relaxed 
     text-white
-    h-auto
-
+    w-full
+    h-96          
+    overflow-y-auto 
+    
     bg-black/50 
     backdrop-blur-xl 
-    border border-white/10 
-    
+    border border-white/10
   "
-    >
-      {brief}
-    </div>
+>
+  {brief}
+</div>
+
   );
 }
 
