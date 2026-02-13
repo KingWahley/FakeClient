@@ -40,7 +40,7 @@ export default function Header() {
       "
     >
       <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-[color:var(--text-1)]">
-        <span>Curated for designers &amp; devs</span>
+        {/* <span>Curated for designers &amp; devs</span> */}
           <button
           type="button"
           onClick={toggleTheme}
@@ -94,7 +94,7 @@ export default function Header() {
       </div>
 
       <p className="max-w-2xl text-base md:text-lg text-[color:var(--text-1)]">
-        Generate realistic client briefs in seconds, then practice pitching,
+        Generate realistic client briefs in seconds. Practice pitching,
         scoping, and pricing with confidence.
       </p>
     </header>
