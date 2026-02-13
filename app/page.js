@@ -5,21 +5,14 @@ export default function Home() {
   return (
     <main
       className="
-    w-Full
-    h-auto
-    mx-auto 
-    p-2 md:p-10 
-    space-y-10
-
- 
-    bg-white/4
-    backdrop-blur-sm
-    border border-white/10
-   
-  "
+        min-h-screen
+        px-4 pb-16 pt-10 md:pt-16
+      "
     >
-      <Header />
-      <BriefForm />
+      <div className="mx-auto w-full max-w-6xl space-y-10">
+        <Header />
+        <BriefForm />
+      </div>
     </main>
   );
 }
