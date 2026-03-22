@@ -20,9 +20,7 @@ export default function BriefOutput({
           </p>
         </div>
         <div className="flex items-center gap-3">
-          <span className="rounded-full border border-[color:var(--border-soft)] bg-white/5 px-3 py-1 text-xs text-[color:var(--text-1)]">
-            Keep refining
-          </span>
+         
           <button
             onClick={onDownload}
             disabled={!canDownload}

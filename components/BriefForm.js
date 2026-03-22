@@ -242,12 +242,10 @@ ${entry.successMetrics}`;
                 Generate a client brief
               </h2>
               <p className="text-sm text-[color:var(--text-1)]">
-                Choose a niche, scope, and seniority level.
+                Choose a niche, scope, and skill level.
               </p>
             </div>
-            <div className="rounded-full border border-[color:var(--border-strong)] bg-[color:var(--pill-bg)] px-4 py-2 text-xs uppercase tracking-[0.2em] text-[color:var(--text-1)]">
-              30 sec setup
-            </div>
+            
           </div>
 
           <div className="mt-6 grid gap-5 md:grid-cols-4">
