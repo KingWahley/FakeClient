@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import BriefOutput from "./BriefOutput";
-import { briefDataset } from "../lib/briefDataset";
+import { briefDataset, enrichDatasetEntry } from "../lib/briefDataset";
 
 export default function BriefForm() {
   const [form, setForm] = useState({
@@ -74,19 +74,33 @@ export default function BriefForm() {
       return "Client Brief\nNo dataset entry matched the current selections.";
     }
     const pick = pool[Math.floor(Math.random() * pool.length)];
-    return formatDatasetBrief(pick, scope);
+    return formatDatasetBrief(enrichDatasetEntry(pick), scope);
   }
 
   function formatDatasetBrief(entry, scope) {
     const client = `Client Brief\n${entry.clientName}\n`;
-    const quick = `${client}\nYou will deliver work for ${entry.quickFocus}.\nFocus on ${entry.goals}\n\nYou must work within ${entry.constraints} and a budget of ${entry.budget}.`;
+    const quick = `${client}
+Project Overview
+You will deliver work for ${entry.quickFocus}.
+
+Deliverables
+${entry.deliverables}
+
+Key Requirements
+${entry.goals} ${entry.technicalSpecs || entry.constraints}
+
+Timeline
+${entry.timeline || "Work should follow a short discovery, production, and review schedule."}
+
+Budget
+${entry.budget}`;
 
     if (scope === "Quick Brief") {
       return quick;
     }
 
     return `${client}
-Summary
+Project Overview
 ${entry.summary}
 
 Business Context
@@ -96,16 +110,31 @@ Objectives
 ${entry.goals}
 
 Target Audience
-Primary buyers are existing customers and new prospects who need clarity and confidence before committing.
+${entry.targetAudience || "Primary buyers are existing customers and new prospects who need clarity and confidence before committing."}
+
+Creative Direction
+${entry.creativeDirection || "Use a commercially believable visual or communication direction that fits the niche and target audience."}
 
 Deliverables
 ${entry.deliverables}
 
+Assets Provided
+${entry.assetsProvided || "Client will provide brand materials, content inputs, and any key references required to begin the work."}
+
+Technical Or Production Specifications
+${entry.technicalSpecs || "The work should include practical specifications, platform requirements, and production details needed for execution."}
+
 Constraints
 ${entry.constraints}
 
+Timeline
+${entry.timeline || "A clear production schedule with review and delivery checkpoints is required."}
+
 Budget
 ${entry.budget}
+
+Approval Criteria
+${entry.approvalCriteria || "The final work should be clear, usable, on-brand, and ready for the next production or launch step."}
 
 Success Metrics
 ${entry.successMetrics}`;
