@@ -12,8 +12,15 @@ export async function POST(req) {
 
     const completion = await groq.chat.completions.create({
       model: "llama-3.1-8b-instant",
-      messages: [{ role: "user", content: prompt }],
-      temperature: 0.8,
+      messages: [
+        {
+          role: "system",
+          content:
+            "You write detailed, commercially realistic project briefs that are specific, self-contained, and immediately actionable.",
+        },
+        { role: "user", content: prompt },
+      ],
+      temperature: 0.55,
     });
 
     return Response.json({

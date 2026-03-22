@@ -256,6 +256,9 @@ ${entry.successMetrics}`;
                     Fashion Illustrator
                   </option>
                   <option className="text-black bg-white/20">
+                    Fashion Designer
+                  </option>
+                  <option className="text-black bg-white/20">
                     2D Animator
                   </option>
                 </select>
