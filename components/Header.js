@@ -29,12 +29,10 @@ export default function Header() {
   }
 
   return (
-    <header
-      
-    >
-      <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-[color:var(--text-1)]">
-        {/* <span>Curated for designers &amp; devs</span> */}
-          <button
+    <header>
+      <div className="flex flex-wrap items-center justify-between gap-4">
+
+        <button
           type="button"
           onClick={toggleTheme}
           className="rounded-full border border-[color:var(--border-strong)] bg-white/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text-1)] transition hover:bg-white/20"
@@ -78,8 +76,6 @@ export default function Header() {
           )}
         </button>
       </div>
-
-     
     </header>
   );
 }

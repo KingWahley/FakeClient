@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Fake Client Lab maskable icon">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f17" />
+      <stop offset="100%" stop-color="#18253d" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4c95d" />
+      <stop offset="100%" stop-color="#5bd3c7" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)" />
+  <circle cx="256" cy="256" r="176" fill="none" stroke="url(#accent)" stroke-width="28" />
+  <path d="M190 164h140v40h-100v72h90v38h-90v126h-40V164Z" fill="#eef2f8" />
+  <path d="M338 164h40v144c0 78-44 132-126 132h-12v-40h12c57 0 86-30 86-92V164Z" fill="#f4c95d" />
+</svg>

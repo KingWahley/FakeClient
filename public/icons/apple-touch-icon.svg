@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="Fake Client Lab Apple touch icon">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f7fb" />
+      <stop offset="100%" stop-color="#dfe7f3" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0b429" />
+      <stop offset="100%" stop-color="#2cb8ad" />
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="40" fill="url(#bg)" />
+  <rect x="28" y="28" width="124" height="124" rx="28" fill="none" stroke="url(#accent)" stroke-width="8" />
+  <path d="M62 61h58v14H78v24h36v14H78v38H62V61Z" fill="#0c111c" />
+  <path d="M122 61h14v50c0 23-13 40-37 40h-4v-14h4c15 0 23-8 23-24V61Z" fill="#f0b429" />
+</svg>
