@@ -5,17 +5,17 @@ import { absoluteUrl, siteConfig } from "../lib/site";
 
 const faqItems = [
   {
-    question: "What does Fake Client Lab generate?",
+    question: "What does Fake A Project generate?",
     answer:
-      "Fake Client Lab generates realistic practice client briefs for creative and technical roles like web development, graphic design, UI/UX, mobile apps, copywriting, fashion, and animation.",
+      "Fake A Project generates realistic practice client briefs for creative and technical roles like web development, graphic design, UI/UX, mobile apps, copywriting, fashion, and animation.",
   },
   {
-    question: "Who is Fake Client Lab for?",
+    question: "Who is Fake A Project for?",
     answer:
       "It is built for freelancers, students, bootcamp learners, junior designers, developers, and creative professionals who want believable projects to practice proposals, pricing, timelines, and delivery planning.",
   },
   {
-    question: "Can I install Fake Client Lab like an app?",
+    question: "Can I install Fake A Project like an app?",
     answer:
       "Yes. The app now includes a web app manifest and service worker, so supported browsers can install it to the home screen or desktop like a lightweight app.",
   },
