@@ -30,14 +30,7 @@ export default function Header() {
 
   return (
     <header
-      className="
-        reveal
-        panel-shell
-        relative overflow-hidden
-        rounded-3xl border border-[color:var(--border-soft)]
-        bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.12),_transparent_60%)]
-        p-6 md:p-10
-      "
+      
     >
       <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-[color:var(--text-1)]">
         {/* <span>Curated for designers &amp; devs</span> */}
@@ -86,17 +79,7 @@ export default function Header() {
         </button>
       </div>
 
-      <div className="mt-4 flex flex-wrap items-start justify-between gap-4">
-        <h1 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-[color:var(--text-0)]">
-          Brief Lab
-        </h1>
-      
-      </div>
-
-      <p className="max-w-2xl text-base md:text-lg text-[color:var(--text-1)]">
-        Generate realistic client briefs in seconds. Practice pitching,
-        scoping, and pricing with confidence.
-      </p>
+     
     </header>
   );
 }
