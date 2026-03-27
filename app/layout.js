@@ -2,6 +2,7 @@ import Script from "next/script";
 import "./globals.css";
 import ServiceWorkerRegister from "../components/ServiceWorkerRegister";
 import { absoluteUrl, getSiteUrl, siteConfig } from "../lib/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const siteUrl = getSiteUrl();
 
@@ -76,6 +77,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Analytics />
       <body>
         <Script id="theme-init" strategy="beforeInteractive">
           {`try {
